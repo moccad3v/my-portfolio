@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Navbar */}
-      <nav className="bg-black text-white p-8 flex justify-between items-center px-10 relative">
+      <nav className="bg-black text-white p-10 flex justify-between items-center px-10 relative">
         {/* Links de navegación */}
         <div className="hidden md:flex gap-6 text-sm uppercase">
           <a href="#about" className="hover:text-gray-400">
@@ -35,7 +35,10 @@ function App() {
         </div>
 
         {/* Botón con la bandera */}
-        <button onClick={toggleLanguage} className="flag-button">
+        <button
+          onClick={toggleLanguage}
+          className="w-[25px] h-[25px] absolute top-5 right-5 md:static"
+        >
           <Flag
             code={language === "es" ? "us" : "co"}
             className="w-full h-full"
@@ -44,7 +47,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <header className="bg-black text-white text-center py-16">
+      <header className="bg-black text-white text-center py-8">
         <h2 className="text-xl">{texts.hi}</h2>
         <h1 className="text-6xl font-bold">Moccad3v</h1>
         <p className="mt-4 text-lg">{texts.headline}</p>
