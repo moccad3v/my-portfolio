@@ -1,8 +1,11 @@
 # Information
 
-This is my portfolio
+## This is my portfolio
 
-react-world-flags para el uso de banderas
+### libraries and packages
+
+react-world-flags for the use of flags
+fortawesome/react-fontawesome for Fontawesome usage
 
 # React + Vite
 

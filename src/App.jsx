@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "./useLanguage";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import moccad3vLogo from "/moccad3v.svg";
 import profileImage from "/profile.png";
 import Flag from "react-world-flags";
@@ -8,46 +10,83 @@ import "./App.css";
 function App() {
   const { language, toggleLanguage, texts } = useLanguage();
   const [clicks, setClicks] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        !event.target.closest(".mobile-menu") &&
+        !event.target.closest(".menu-button")
+      ) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Navbar */}
-      <nav className="bg-black text-white p-10 flex justify-between items-center px-10 relative">
-        {/* Links de navegación */}
+      <nav className="bg-[#001011] text-white p-6 flex justify-between items-center relative">
+        {/* Botón de menú hamburguesa */}
+        <button
+          className="md:hidden text-white focus:outline-none menu-button"
+          onClick={(e) => {
+            e.stopPropagation(); // Evita el cierre inmediato
+            setMenuOpen(!menuOpen);
+          }}
+        >
+          <FontAwesomeIcon
+            icon={faBars}
+            style={{ color: "#fffffc", fontSize: "24px" }}
+          />
+        </button>
+
+        {/* Links de navegación (versión escritorio) */}
         <div className="hidden md:flex gap-6 text-sm uppercase">
-          <a href="#about" className="hover:text-gray-400">
-            {texts.about}
-          </a>
-          <a href="#services" className="hover:text-gray-400">
-            {texts.services}
-          </a>
-          <a href="#works" className="hover:text-gray-400">
-            {texts.projects}
-          </a>
-          <a href="#contact" className="hover:text-gray-400">
-            {texts.contact}
-          </a>
+          {["about", "services", "projects", "contact"].map((item) => (
+            <a key={item} href={`#${item}`} className="hover:text-gray-400">
+              {texts[item]}
+            </a>
+          ))}
         </div>
 
-        {/* Logo centrado absolutamente */}
+        {/* Logo */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
-          <img src={moccad3vLogo} alt="Logo" className="w-16 h-16" />
+          <img src={moccad3vLogo} alt="Logo" className="w-16 h-16 mt-2" />
         </div>
 
         {/* Botón con la bandera */}
         <button
           onClick={toggleLanguage}
-          className="w-[25px] h-[25px] absolute top-5 right-5 md:static"
+          className="w-[25px] h-[25px] absolute top-6.5 right-5 md:static"
         >
           <Flag
             code={language === "es" ? "us" : "co"}
-            className="w-full h-full"
+            className="w-full h-full rounded-lg shadow-lg"
           />
         </button>
       </nav>
 
+      {/* Menú desplegable en móviles */}
+      {menuOpen && (
+        <div className="mobile-menu md:hidden absolute top-14 left-2 right-2 bg-[#2b2b2bcc] text-white flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
+          {["about", "services", "projects", "contact"].map((item) => (
+            <a
+              key={item}
+              href={`#${item}`}
+              className="hover:text-gray-400"
+              onClick={() => setMenuOpen(false)}
+            >
+              {texts[item]}
+            </a>
+          ))}
+        </div>
+      )}
+
       {/* Hero Section */}
-      <header className="bg-black text-white text-center py-8">
+      <header className="bg-[#001011] text-white text-center py-8">
         <h2 className="text-xl">{texts.hi}</h2>
         <h1 className="text-6xl font-bold">Moccad3v</h1>
         <p className="mt-4 text-lg">{texts.headline}</p>
@@ -62,8 +101,7 @@ function App() {
       </header>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-white text-center">
-        {/* Botón de contar clics */}
+      <section id="services" className="py-16 bg-[#FFFFFC] text-center">
         <button
           onClick={() => setClicks(clicks + 1)}
           className="mt-6 px-6 py-3 bg-gradient-to-r from-blue-700 to-[#004aad] text-white font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
