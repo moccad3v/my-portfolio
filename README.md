@@ -4,8 +4,8 @@ This is my portfolio
 
 ### Libraries and packages
 
-- `react-world-flags` para el uso de banderas
-- `fortawesome/react-fontawesome` para el uso de FontAwesome
+- `react-world-flags` for the use of flags
+- `fortawesome/react-fontawesome` for the use of FontAwesome icons
 
 # React + Vite
 
