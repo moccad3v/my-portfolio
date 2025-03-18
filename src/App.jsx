@@ -46,7 +46,7 @@ function App() {
           </button>
 
           {/* Links de navegación (versión escritorio) */}
-          <div className="hidden md:flex gap-6 text-sm uppercase">
+          <div className="montserrat-font hidden md:flex gap-6 text-sm uppercase">
             {["about", "services", "projects", "contact"].map((item) => (
               <a key={item} href={`#${item}`} className="hover:text-gray-400">
                 {texts[item]}
@@ -74,7 +74,7 @@ function App() {
 
       {/* Menú desplegable en móviles */}
       {menuOpen && (
-        <div className="mobile-menu md:hidden absolute top-16 left-3 right-3 bg-[#2b2b2bcc] text-white flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
+        <div className="montserrat-font mobile-menu md:hidden absolute top-16 left-3 right-3 bg-[#2b2b2bcc] text-white flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
           {["about", "services", "projects", "contact"].map((item) => (
             <a
               key={item}
@@ -90,9 +90,9 @@ function App() {
 
       {/* Hero Section */}
       <header className="bg-[#001011] text-white text-center py-8">
-        <h2 className="text-xl">{texts.hi}</h2>
-        <h1 className="text-6xl font-bold">Moccad3v</h1>
-        <p className="mt-4 text-lg">{texts.headline}</p>
+        <h2 className="text-xl montserrat-font">{texts.hi}</h2>
+        <h1 className="text-6xl font-bold sifonn-font">Moccad3v</h1>
+        <p className="mt-4 text-lg montserrat-font">{texts.headline}</p>
 
         <div className="flex justify-center mt-6">
           <img

@@ -3,6 +3,50 @@
   text-align: center;
 }
 
+/* Fuentes */
+
+@font-face {
+  font-family: "Sifonn-Pro";
+  src: url("https://db.onlinewebfonts.com/t/25c294f3631fb5a0c1ef659a85cabdcf.eot");
+  src: url("https://db.onlinewebfonts.com/t/25c294f3631fb5a0c1ef659a85cabdcf.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/25c294f3631fb5a0c1ef659a85cabdcf.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/25c294f3631fb5a0c1ef659a85cabdcf.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/25c294f3631fb5a0c1ef659a85cabdcf.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/25c294f3631fb5a0c1ef659a85cabdcf.svg#Sifonn-Pro")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://db.onlinewebfonts.com/t/a81c6ef023e90fb9f87ac017d242a337.eot");
+  src: url("https://db.onlinewebfonts.com/t/a81c6ef023e90fb9f87ac017d242a337.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a81c6ef023e90fb9f87ac017d242a337.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a81c6ef023e90fb9f87ac017d242a337.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/a81c6ef023e90fb9f87ac017d242a337.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a81c6ef023e90fb9f87ac017d242a337.svg#Montserrat")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sifonn-font {
+  font-family: "Sifonn-Pro", sans-serif;
+}
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
