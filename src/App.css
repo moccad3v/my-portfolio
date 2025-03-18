@@ -39,12 +39,31 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("https://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.eot");
+  src: url("https://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/07689d4eaaa3d530d58826b5d7f84735.svg#Montserrat-Regular")
+      format("svg");
+}
+
 .sifonn-font {
   font-family: "Sifonn-Pro", sans-serif;
 }
 
-.montserrat-font {
+.montserrat-thin-font {
   font-family: "Montserrat", sans-serif;
+}
+
+.montserrat-regular-font {
+  font-family: "Montserrat-Regular", sans-serif;
 }
 
 @keyframes logo-spin {
