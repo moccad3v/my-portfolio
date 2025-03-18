@@ -28,50 +28,53 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Navbar */}
-      <nav className="bg-[#001011] text-white p-6 flex justify-between items-center relative">
-        {/* Botón de menú hamburguesa */}
-        <button
-          className="md:hidden text-white focus:outline-none menu-button"
-          onClick={(e) => {
-            e.stopPropagation(); // Evita el cierre inmediato
-            setMenuOpen(!menuOpen);
-          }}
-        >
-          <FontAwesomeIcon
-            icon={faBars}
-            style={{ color: "#fffffc", fontSize: "24px" }}
-          />
-        </button>
+      <nav className="bg-[#001011] text-white p-8 flex items-center justify-between relative">
+        {/* Contenedor de elementos alineados en móviles */}
+        <div className="flex items-center gap-4">
+          {/* Botón de menú hamburguesa */}
+          <button
+            className="md:hidden text-white focus:outline-none menu-button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen(!menuOpen);
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faBars}
+              style={{ color: "#fffffc", fontSize: "24px" }}
+            />
+          </button>
 
-        {/* Links de navegación (versión escritorio) */}
-        <div className="hidden md:flex gap-6 text-sm uppercase">
-          {["about", "services", "projects", "contact"].map((item) => (
-            <a key={item} href={`#${item}`} className="hover:text-gray-400">
-              {texts[item]}
-            </a>
-          ))}
-        </div>
+          {/* Links de navegación (versión escritorio) */}
+          <div className="hidden md:flex gap-6 text-sm uppercase">
+            {["about", "services", "projects", "contact"].map((item) => (
+              <a key={item} href={`#${item}`} className="hover:text-gray-400">
+                {texts[item]}
+              </a>
+            ))}
+          </div>
 
-        {/* Logo */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <img src={moccad3vLogo} alt="Logo" className="w-16 h-16 mt-2" />
+          {/* Logo */}
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <img src={moccad3vLogo} alt="Logo" className="w-16 h-16" />
+          </div>
         </div>
 
         {/* Botón con la bandera */}
         <button
           onClick={toggleLanguage}
-          className="w-[25px] h-[25px] absolute top-6.5 right-5 md:static"
+          className="w-[25px] h-[25px] md:static"
         >
           <Flag
             code={language === "es" ? "us" : "co"}
-            className="w-full h-full rounded-lg shadow-lg"
+            className="w-full h-full rounded-sm shadow-sm"
           />
         </button>
       </nav>
 
       {/* Menú desplegable en móviles */}
       {menuOpen && (
-        <div className="mobile-menu md:hidden absolute top-14 left-2 right-2 bg-[#2b2b2bcc] text-white flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
+        <div className="mobile-menu md:hidden absolute top-16 left-3 right-3 bg-[#2b2b2bcc] text-white flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
           {["about", "services", "projects", "contact"].map((item) => (
             <a
               key={item}
