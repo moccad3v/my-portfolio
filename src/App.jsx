@@ -133,10 +133,12 @@ function App() {
             &copy; {new Date().getFullYear()} {texts.copyright}
           </p>
           <div className="flex justify-center md:justify-end gap-4 mt-2 md:mt-0">
-            <a href="#" className="text-white hover:text-gray-400">
+            <a href="https://www.facebook.com/moccad3v" className="text-white hover:text-gray-400" target="_blank"
+              rel="noopener noreferrer">
               <FontAwesomeIcon icon={faFacebookF} size="lg" />
             </a>
-            <a href="#" className="text-white hover:text-gray-400">
+            <a href="https://www.x.com/moccad3v" className="text-white hover:text-gray-400" target="_blank"
+              rel="noopener noreferrer">
               <FontAwesomeIcon icon={faXTwitter} size="lg" />
             </a>
             <a
