@@ -106,3 +106,8 @@
   width: 25px;
   height: 25px;
 }
+
+.curved-header {
+  border-bottom-left-radius: 140% 400px;
+  border-bottom-right-radius: 140% 400px;
+}

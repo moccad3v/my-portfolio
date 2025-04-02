@@ -8,7 +8,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import moccad3vLogo from "/moccad3v.svg";
-import profileImage from "/profile.png";
+import profileImage from "/profile2.png";
 import Flag from "react-world-flags";
 import "./App.css";
 
@@ -31,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col min-h-screen">
       {/* Navbar */}
       <nav className="bg-[#001011] text-white p-8 flex items-center justify-between relative">
         {/* Contenedor de elementos alineados en móviles */}
@@ -96,19 +96,15 @@ function App() {
       {/* Hero Section */}
       <main className="flex-grow h-full">
         {/* Hero Section */}
-        <header className="bg-[#001011] text-white text-center py-8">
+        <header className="bg-[#001011] text-white text-center py-4 curved-header">
           <h2 className="text-xl montserrat-regular-font">{texts.hi}</h2>
           <h1 className="text-6xl font-bold sifonn-font">Moccad3v</h1>
-          <p className="mt-4 text-lg montserrat-regular-font">
+          <p className="mt-4 text-lg montserrat-regular-font md: px-2">
             {texts.headline}
           </p>
 
           <div className="flex justify-center mt-6">
-            <img
-              src={profileImage}
-              alt="Profile"
-              className="w-40 h-40 rounded-full"
-            />
+            <img src={profileImage} alt="Profile" className="w-80 h-80" />
           </div>
         </header>
 
