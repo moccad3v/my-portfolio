@@ -97,11 +97,11 @@ function App() {
       <main className="flex-grow h-full">
         {/* Hero Section */}
         <header className="bg-[#001011] text-white text-center py-4 curved-header">
-          <h2 className="text-xl montserrat-regular-font">{texts.hi}</h2>
+          <h1 className="text-2xl montserrat-regular-font">{texts.hi}</h1>
           <h1 className="text-6xl font-bold sifonn-font">Moccad3v</h1>
-          <p className="mt-4 text-lg montserrat-regular-font md: px-2">
+          <h1 className="mt-3 text-lg montserrat-light-font md: px-2">
             {texts.headline}
-          </p>
+          </h1>
 
           <div className="flex justify-center mt-6">
             <img src={profileImage} alt="Profile" className="w-80 h-80" />
@@ -129,12 +129,20 @@ function App() {
             &copy; {new Date().getFullYear()} {texts.copyright}
           </p>
           <div className="flex justify-center md:justify-end gap-4 mt-2 md:mt-0">
-            <a href="https://www.facebook.com/moccad3v" className="text-white hover:text-gray-400" target="_blank"
-              rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/moccad3v"
+              className="text-white hover:text-gray-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faFacebookF} size="lg" />
             </a>
-            <a href="https://www.x.com/moccad3v" className="text-white hover:text-gray-400" target="_blank"
-              rel="noopener noreferrer">
+            <a
+              href="https://www.x.com/moccad3v"
+              className="text-white hover:text-gray-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faXTwitter} size="lg" />
             </a>
             <a
