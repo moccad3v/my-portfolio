@@ -15,7 +15,7 @@ const aboutme = ({ clicks, setClicks, texts }) => {
 
       <button
         onClick={() => setClicks(clicks + 1)}
-        className="font-montserrat mt-10 px-6 py-3 bg-gradient-to-r from-blue-700 to-[#004aad] text-white font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
+        className="font-montserrat mt-10 px-6 py-3 bg-gradient-to-r from-blue-700 to-[#004aad] text-[#FFFFFC] font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
       >
         {clicks === 0 ? texts.clickHere : texts.clicksMessage(clicks)}
       </button>

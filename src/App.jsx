@@ -31,24 +31,24 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navbar */}
-      <nav className="bg-[#001011] text-white p-8 flex items-center justify-between relative">
+      <nav className="bg-moccaBlack text-moccaWhite p-8 flex items-center justify-between relative">
         {/* Contenedor de elementos alineados en móviles */}
         <div className="flex items-center gap-4">
           {/* Botón de menú hamburguesa */}
           <button
-            className="md:hidden text-white focus:outline-none menu-button"
+            className="md:hidden text-moccaWhite focus:outline-none menu-button"
             onClick={(e) => {
               e.stopPropagation();
               setMenuOpen(!menuOpen);
             }}
           >
-            <Menu className="w-8 h-8 text-white" />
+            <Menu className="w-8 h-8 text-moccaWhite" />
           </button>
 
           {/* Links de navegación (versión escritorio) */}
           <div className="font-montserrat hidden md:flex gap-6 text-sm uppercase">
             {["about", "services", "projects", "contact"].map((item) => (
-              <a key={item} href={`#${item}`} className="hover:text-gray-400">
+              <a key={item} href={`#${item}`} className="hover:text-moccaBlue">
                 {texts[item]}
               </a>
             ))}
@@ -79,12 +79,12 @@ function App() {
 
       {/* Menú desplegable en móviles */}
       {menuOpen && (
-        <div className="z-50 font-montserrat mobile-menu md:hidden absolute top-16 left-3 right-3 bg-[#2b2b2bcc] text-white flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
+        <div className="z-50 font-montserrat mobile-menu md:hidden absolute top-16 left-3 right-3 bg-moccaGrayT text-moccaWhite flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
           {["about", "services", "projects", "contact"].map((item) => (
             <a
               key={item}
               href={`#${item}`}
-              className="hover:text-gray-400"
+              className="hover:text-moccaBlue"
               onClick={() => setMenuOpen(false)}
             >
               {texts[item]}
@@ -96,10 +96,14 @@ function App() {
       {/* Portfolio */}
       <main className="flex-grow h-full">
         {/* Introduction Section */}
-        <header className="bg-[#001011] text-white text-center py-4 curved-header">
-          <h1 className="text-2xl font-montserrat">{texts.hi}</h1>
-          <h1 className="text-6xl font-bold sifonn-font">Moccad3v</h1>
-          <h1 className="mt-3 text-lg font-montserrat md: px-2">
+        <header className="bg-moccaBlack text-moccaWhite text-center py-4 curved-header">
+          <h1 className="text-moccaWhite text-2xl font-montserrat">
+            {texts.hi}
+          </h1>
+          <h1 className="text-moccaWhite text-6xl font-bold sifonn-font">
+            Moccad3v
+          </h1>
+          <h1 className="text-moccaWhite mt-3 text-lg font-montserrat md: px-2">
             {texts.headline}
           </h1>
           {/* My photo */}
@@ -118,7 +122,7 @@ function App() {
       </main>
 
       {/* Footer Section */}
-      <footer className="bottom-0 left-0 w-full bg-[#001011] text-white py-4 px-8 md:px-18 font-montserrat">
+      <footer className="bottom-0 left-0 w-full bg-moccaBlack text-moccaWhite py-4 px-8 md:px-18 font-montserrat">
         <div className="mx-auto flex flex-col md:grid md:grid-cols-3 items-center text-center md:text-left">
           <p className="text-sm md:justify-self-start">{texts.proud}</p>
           <p className="text-sm md:text-center md:justify-self-center mt-2 md:mt-0">
@@ -127,27 +131,24 @@ function App() {
           <div className="flex justify-center md:justify-end gap-4 mt-2 md:mt-0">
             <a
               href="https://www.facebook.com/moccad3v"
-              className="text-white hover:text-gray-400"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SIFacebook className="w-6 h-6 text-white hover:text-blue-500 transition" />
+              <SIFacebook className="w-6 h-6 hover:text-moccaBlue transition" />
             </a>
             <a
               href="https://www.x.com/moccad3v"
-              className="text-white hover:text-gray-400"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SIX className="w-6 h-6 text-white" />
+              <SIX className="w-6 h-6  hover:text-moccaBlue transition" />
             </a>
             <a
               href="https://www.instagram.com/moccad3v"
-              className="text-white hover:text-gray-400"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SIInstagram className="w-6 h-6 text-white hover:text-blue-500 transition" />
+              <SIInstagram className="w-6 h-6 hover:text-moccaBlue transition" />
             </a>
           </div>
         </div>
