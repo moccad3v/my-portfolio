@@ -8,7 +8,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import moccad3vLogo from "/moccad3v.svg";
-import profileImage from "/profile2.png";
+import profileImage from "../public/images/profile2.webp";
 import AboutMe from "./components/aboutme.jsx";
 import Flag from "react-world-flags";
 import "./styles/App.css";
@@ -105,7 +105,12 @@ function App() {
           </h1>
           {/* My photo */}
           <div className="flex justify-center mt-6">
-            <img src={profileImage} alt="Profile" className="w-80 h-80" />
+            <img
+              src={profileImage}
+              alt="Profile"
+              className="w-80 h-80"
+              loading="lazy"
+            />
           </div>
         </header>
 
