@@ -3,6 +3,20 @@
   text-align: center;
 }
 
+/* Fuentes */
+
+@font-face {
+  font-family: "Sifonn-Pro";
+  src: url("/fonts/Sifonn-Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.sifonn-font {
+  font-family: "Sifonn-Pro", sans-serif;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
