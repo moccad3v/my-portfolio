@@ -7,7 +7,7 @@ import {
   faXTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import moccad3vLogo from "/moccad3v.svg";
+import moccad3vLogo from "../public/images/moccad3v.svg";
 import profileImage from "../public/images/profile2.webp";
 import AboutMe from "./components/aboutme.jsx";
 import Flag from "react-world-flags";
@@ -62,7 +62,12 @@ function App() {
 
           {/* Logo */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <img src={moccad3vLogo} alt="Logo" className="w-16 h-16" />
+            <img
+              src={moccad3vLogo}
+              alt="Logo"
+              className="w-16 h-16"
+              loading="lazy"
+            />
           </div>
         </div>
 
