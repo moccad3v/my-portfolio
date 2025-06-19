@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "./hooks/useLanguage.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebookF,
-  faXTwitter,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-import moccad3vLogo from "../public/images/moccad3v.svg";
-import profileImage from "../public/images/profile2.webp";
-import AboutMe from "./components/aboutme.jsx";
 import Flag from "./components/flag.jsx";
+import AboutMe from "./components/aboutme.jsx";
+import Menu from "~icons/lucide/menu";
+import SIFacebook from "~icons/simple-icons/facebook";
+import SIX from "~icons/simple-icons/x";
+import SIInstagram from "~icons/simple-icons/instagram";
+import Moccad3vLogo from "../public/images/moccad3v.svg";
+import profileImage from "../public/images/profile2.webp";
 import "./styles/App.css";
 
 function App() {
@@ -45,10 +42,7 @@ function App() {
               setMenuOpen(!menuOpen);
             }}
           >
-            <FontAwesomeIcon
-              icon={faBars}
-              style={{ color: "#fffffc", fontSize: "24px" }}
-            />
+            <Menu className="w-8 h-8 text-white" />
           </button>
 
           {/* Links de navegación (versión escritorio) */}
@@ -63,7 +57,7 @@ function App() {
           {/* Logo */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
             <img
-              src={moccad3vLogo}
+              src={Moccad3vLogo}
               alt="Logo"
               className="w-16 h-16"
               loading="lazy"
@@ -137,7 +131,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faFacebookF} size="lg" />
+              <SIFacebook className="w-6 h-6 text-white hover:text-blue-500 transition" />
             </a>
             <a
               href="https://www.x.com/moccad3v"
@@ -145,7 +139,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faXTwitter} size="lg" />
+              <SIX className="w-6 h-6 text-white" />
             </a>
             <a
               href="https://www.instagram.com/moccad3v"
@@ -153,7 +147,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faInstagram} size="lg" />
+              <SIInstagram className="w-6 h-6 text-white hover:text-blue-500 transition" />
             </a>
           </div>
         </div>
