@@ -52,7 +52,7 @@ function App() {
           </button>
 
           {/* Links de navegación (versión escritorio) */}
-          <div className="montserrat-regular-font hidden md:flex gap-6 text-sm uppercase">
+          <div className="font-montserrat hidden md:flex gap-6 text-sm uppercase">
             {["about", "services", "projects", "contact"].map((item) => (
               <a key={item} href={`#${item}`} className="hover:text-gray-400">
                 {texts[item]}
@@ -80,7 +80,7 @@ function App() {
 
       {/* Menú desplegable en móviles */}
       {menuOpen && (
-        <div className="z-50 montserrat-regular-font mobile-menu md:hidden absolute top-16 left-3 right-3 bg-[#2b2b2bcc] text-white flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
+        <div className="z-50 font-montserrat mobile-menu md:hidden absolute top-16 left-3 right-3 bg-[#2b2b2bcc] text-white flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
           {["about", "services", "projects", "contact"].map((item) => (
             <a
               key={item}
@@ -98,9 +98,9 @@ function App() {
       <main className="flex-grow h-full">
         {/* Introduction Section */}
         <header className="bg-[#001011] text-white text-center py-4 curved-header">
-          <h1 className="text-2xl montserrat-regular-font">{texts.hi}</h1>
+          <h1 className="text-2xl font-montserrat">{texts.hi}</h1>
           <h1 className="text-6xl font-bold sifonn-font">Moccad3v</h1>
-          <h1 className="mt-3 text-lg montserrat-light-font md: px-2">
+          <h1 className="mt-3 text-lg font-montserrat md: px-2">
             {texts.headline}
           </h1>
           {/* My photo */}
@@ -114,7 +114,7 @@ function App() {
       </main>
 
       {/* Footer Section */}
-      <footer className="bottom-0 left-0 w-full bg-[#001011] text-white py-4 px-8 md:px-18 montserrat-regular-font">
+      <footer className="bottom-0 left-0 w-full bg-[#001011] text-white py-4 px-8 md:px-18 font-montserrat">
         <div className="mx-auto flex flex-col md:grid md:grid-cols-3 items-center text-center md:text-left">
           <p className="text-sm md:justify-self-start">{texts.proud}</p>
           <p className="text-sm md:text-center md:justify-self-center mt-2 md:mt-0">
