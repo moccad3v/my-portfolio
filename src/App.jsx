@@ -146,7 +146,7 @@ function App() {
               <FontAwesomeIcon icon={faXTwitter} size="lg" />
             </a>
             <a
-              href="https://www.instagram.com/moccad3v"
+              href="https://www.instagram.com/studiosmocca"
               className="text-white hover:text-gray-400"
               target="_blank"
               rel="noopener noreferrer"

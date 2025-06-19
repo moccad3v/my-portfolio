@@ -127,6 +127,6 @@
 }
 
 .curved-header {
-  border-bottom-left-radius: 140% 400px;
-  border-bottom-right-radius: 140% 400px;
+  position: relative;
+  clip-path: ellipse(90% 97% at 50% 0%);
 }
