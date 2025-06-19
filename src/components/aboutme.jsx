@@ -4,7 +4,7 @@ const aboutme = ({ clicks, setClicks, texts }) => {
   return (
     <section
       id="about"
-      className="bg-[#FFFFFC] py-40 flex flex-col justify-center items-center text-center px-4"
+      className="bg-[#FFFFFC] py-20 flex flex-col justify-center items-center text-center px-4"
     >
       <h2 className="text-4xl font-bold mb-6 text-[#001011] sifonn-font">
         {texts.aboutme.title}

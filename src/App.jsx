@@ -117,7 +117,7 @@ function App() {
       <footer className="bottom-0 left-0 w-full bg-[#001011] text-white py-4 px-8 md:px-18 montserrat-regular-font">
         <div className="mx-auto flex flex-col md:grid md:grid-cols-3 items-center text-center md:text-left">
           <p className="text-sm md:justify-self-start">{texts.proud}</p>
-          <p className="text-sm md:text-center md:justify-self-center">
+          <p className="text-sm md:text-center md:justify-self-center mt-2 md:mt-0">
             &copy; {new Date().getFullYear()} {texts.copyright}
           </p>
           <div className="flex justify-center md:justify-end gap-4 mt-2 md:mt-0">
