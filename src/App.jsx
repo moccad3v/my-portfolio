@@ -10,7 +10,7 @@ import {
 import moccad3vLogo from "../public/images/moccad3v.svg";
 import profileImage from "../public/images/profile2.webp";
 import AboutMe from "./components/aboutme.jsx";
-import Flag from "react-world-flags";
+import Flag from "./components/flag.jsx";
 import "./styles/App.css";
 
 function App() {
@@ -74,7 +74,7 @@ function App() {
         {/* Botón con la bandera */}
         <button
           onClick={toggleLanguage}
-          className="w-[25px] h-[25px] md:static"
+          className="w-[30px] h-[20px] md:static"
         >
           <Flag
             code={language === "es" ? "us" : "co"}
@@ -148,7 +148,7 @@ function App() {
               <FontAwesomeIcon icon={faXTwitter} size="lg" />
             </a>
             <a
-              href="https://www.instagram.com/studiosmocca"
+              href="https://www.instagram.com/moccad3v"
               className="text-white hover:text-gray-400"
               target="_blank"
               rel="noopener noreferrer"
