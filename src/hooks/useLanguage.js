@@ -1,6 +1,6 @@
 import { useState } from "react";
-import es from "./languages/es";
-import en from "./languages/en";
+import es from "../languages/es";
+import en from "../languages/en";
 
 export function useLanguage() {
   const [language, setLanguage] = useState("en");

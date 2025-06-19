@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLanguage } from "./useLanguage";
+import { useLanguage } from "./hooks/useLanguage.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -9,8 +9,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import moccad3vLogo from "/moccad3v.svg";
 import profileImage from "/profile2.png";
+import AboutMe from "./components/aboutme.jsx";
 import Flag from "react-world-flags";
-import "./App.css";
+import "./styles/App.css";
 
 function App() {
   const { language, toggleLanguage, texts } = useLanguage();
@@ -93,35 +94,26 @@ function App() {
         </div>
       )}
 
-      {/* Hero Section */}
+      {/* Portfolio */}
       <main className="flex-grow h-full">
-        {/* Hero Section */}
+        {/* Introduction Section */}
         <header className="bg-[#001011] text-white text-center py-4 curved-header">
           <h1 className="text-2xl montserrat-regular-font">{texts.hi}</h1>
           <h1 className="text-6xl font-bold sifonn-font">Moccad3v</h1>
           <h1 className="mt-3 text-lg montserrat-light-font md: px-2">
             {texts.headline}
           </h1>
-
+          {/* My photo */}
           <div className="flex justify-center mt-6">
             <img src={profileImage} alt="Profile" className="w-80 h-80" />
           </div>
         </header>
 
-        {/* Services Section */}
-        <section
-          id="services"
-          className="bg-[#FFFFFC] py-40 flex justify-center items-center"
-        >
-          <button
-            onClick={() => setClicks(clicks + 1)}
-            className="montserrat-regular-font mt-6 mb-6 px-6 py-3 bg-gradient-to-r from-blue-700 to-[#004aad] text-white font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
-          >
-            {clicks === 0 ? texts.clickHere : texts.clicksMessage(clicks)}
-          </button>
-        </section>
+        {/* About me Section */}
+        <AboutMe clicks={clicks} setClicks={setClicks} texts={texts} />
       </main>
 
+      {/* Footer Section */}
       <footer className="bottom-0 left-0 w-full bg-[#001011] text-white py-4 px-8 md:px-18 montserrat-regular-font">
         <div className="mx-auto flex flex-col md:grid md:grid-cols-3 items-center text-center md:text-left">
           <p className="text-sm md:justify-self-start">{texts.proud}</p>

@@ -10,6 +10,11 @@ const es = {
   clicksMessage: (clicks) => `Has hecho clic ${clicks} veces 🎉`,
   proud: "Orgullosamente diseñada por Moccad3v",
   copyright: "Todos los derechos reservados",
+  aboutme: {
+    title: "Más sobre mi",
+    description:
+      "¡Hola! Soy Juan, pero en el mundo digital me conocen como Moccad3v. Desarrollador Full-Stack apasionado por convertir ideas en software funcional, intuitivo y escalable.",
+  },
 };
 
 export default es;
