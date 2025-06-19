@@ -80,7 +80,7 @@ function App() {
 
       {/* Menú desplegable en móviles */}
       {menuOpen && (
-        <div className="montserrat-regular-font mobile-menu md:hidden absolute top-16 left-3 right-3 bg-[#2b2b2bcc] text-white flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
+        <div className="z-50 montserrat-regular-font mobile-menu md:hidden absolute top-16 left-3 right-3 bg-[#2b2b2bcc] text-white flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
           {["about", "services", "projects", "contact"].map((item) => (
             <a
               key={item}
