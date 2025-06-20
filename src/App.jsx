@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "./hooks/useLanguage.js";
 import Flag from "./components/flag.jsx";
 import AboutMe from "./components/aboutme.jsx";
+import Services from "./components/services.jsx";
 import Menu from "~icons/lucide/menu";
 import SIFacebook from "~icons/simple-icons/facebook";
 import SIX from "~icons/simple-icons/x";
@@ -47,7 +48,7 @@ function App() {
 
           {/* Links de navegación (versión escritorio) */}
           <div className="font-montserrat hidden md:flex gap-6 text-sm uppercase">
-            {["about", "services", "projects", "contact"].map((item) => (
+            {["aboutMe", "services", "projects", "contact"].map((item) => (
               <a key={item} href={`#${item}`} className="hover:text-moccaBlue">
                 {texts[item]}
               </a>
@@ -80,7 +81,7 @@ function App() {
       {/* Menú desplegable en móviles */}
       {menuOpen && (
         <div className="z-50 font-montserrat mobile-menu md:hidden absolute top-16 left-3 right-3 bg-moccaGrayT text-moccaWhite flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
-          {["about", "services", "projects", "contact"].map((item) => (
+          {["aboutMe", "services", "projects", "contact"].map((item) => (
             <a
               key={item}
               href={`#${item}`}
@@ -118,11 +119,13 @@ function App() {
         </header>
 
         {/* About me Section */}
-        <AboutMe clicks={clicks} setClicks={setClicks} texts={texts} />
+        <AboutMe texts={texts} />
+        {/* About me Section */}
+        <Services clicks={clicks} setClicks={setClicks} texts={texts} />
       </main>
 
       {/* Footer Section */}
-      <footer className="bottom-0 left-0 w-full bg-moccaBlack text-moccaWhite py-4 px-8 md:px-18 font-montserrat">
+      <footer className="bottom-0 left-0 w-full bg-moccaBlack text-moccaWhite mt-4 py-4 px-8 md:px-18 font-montserrat">
         <div className="mx-auto flex flex-col md:grid md:grid-cols-3 items-center text-center md:text-left">
           <p className="text-sm md:justify-self-start">{texts.proud}</p>
           <p className="text-sm md:text-center md:justify-self-center mt-2 md:mt-0">
