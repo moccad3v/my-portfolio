@@ -6,8 +6,8 @@ import Menu from "~icons/lucide/menu";
 import SIFacebook from "~icons/simple-icons/facebook";
 import SIX from "~icons/simple-icons/x";
 import SIInstagram from "~icons/simple-icons/instagram";
-import Moccad3vLogo from "../public/images/moccad3v.svg";
-import profileImage from "../public/images/profile2.webp";
+import Moccad3vLogo from "/images/moccad3v.svg";
+import profileImage from "/images/profile2.webp";
 import "./styles/App.css";
 
 function App() {
