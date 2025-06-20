@@ -9,8 +9,13 @@ const aboutme = ({ clicks, setClicks, texts }) => {
       <h2 className="text-4xl font-bold mb-6 text-moccaBlack sifonn-font">
         {texts.aboutme.title}
       </h2>
-      <p className="text-lg max-w-4xl text-moccaBlack font-montserrat">
-        {texts.aboutme.description}
+
+      <p className="whitespace-pre-line text-lg max-w-4xl text-moccaBlack font-montserrat">
+        {texts.aboutme.description.p1}
+        <span className="font-bold">{texts.aboutme.description.hl1}</span>
+        {texts.aboutme.description.p2}
+        <span className="font-bold">{texts.aboutme.description.hl2}</span>
+        {texts.aboutme.description.p3}
       </p>
 
       <button

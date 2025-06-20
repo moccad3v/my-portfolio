@@ -4,16 +4,20 @@ const es = {
   projects: "Proyectos",
   contact: "Contacto",
   hi: "¡Hola! Soy",
-  headline:
-    "Ingeniero de Sistemas | Desarrollador Full-stack | Entusiasta de la IA | Diseñador Gráfico y Fotógrafo Aficionado",
+  headline: "Ingeniero de Sistemas | Desarrollador WEB Full-stack | QA Tester",
   clickHere: "¡Haz clic aquí para comenzar!",
-  clicksMessage: (clicks) => `Has hecho clic ${clicks} veces 🎉`,
-  proud: "Orgullosamente diseñada por Moccad3v",
+  clicksMessage: (clicks) => `Has hecho clic ${clicks} veces. 🎉`,
+  proud: "Orgullosamente elaborada por Moccad3v",
   copyright: "Todos los derechos reservados",
   aboutme: {
-    title: "Más sobre mi",
-    description:
-      "¡Hola! Soy Juan, pero en el mundo digital me conocen como Moccad3v. Desarrollador Full-Stack apasionado por convertir ideas en software funcional, intuitivo y escalable.",
+    title: "Sobre mi",
+    description: {
+      p1: "Me llamo Juan Pascuas, pero en el mundo digital me conocen como ",
+      hl1: "Moccad3v",
+      p2: ".\nSoy ingeniero de sistemas y encontré en el desarrollo WEB la oportunidad de explotar todo mi talento.\nA lo largo de mi experiencia he desarrollado habilidades técnicas sólidas como ",
+      hl2: "Full-Stack",
+      p3: ".\nPongámonos en contacto y construyamos ese proyecto que tanto deseas.",
+    },
   },
 };
 
