@@ -4,15 +4,13 @@ This is my portfolio
 
 ### Libraries and packages
 
-- `react-world-flags` for the use of flags
-- `fortawesome/react-fontawesome` for the use of FontAwesome icons
+- Flags from `flagpedia.net`
+- Using `unplugin-icons` to import icons from `lucide.dev` and `simpleicons.org`, leveraging iconify's ecosystem.
 
 ### Fuentes
 
-www.onlinewebfonts.com
-
-- `Montserrat family`
-- `Sifonn` for the use of FontAwesome icons
+- Montserrat loaded via `Google Fonts`
+- Sifonn licensed and loaded manually from `Online Web Fonts` or local assets.
 
 ### React + Vite
 
