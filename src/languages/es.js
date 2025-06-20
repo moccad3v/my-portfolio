@@ -28,6 +28,18 @@ const es = {
       p1: "",
     },
   },
+  projectsSec: {
+    title: "Proyectos",
+    description: {
+      p1: "",
+    },
+  },
+  contactSec: {
+    title: "Contacto",
+    description: {
+      p1: "",
+    },
+  },
 };
 
 export default es;

@@ -3,6 +3,8 @@ import { useLanguage } from "./hooks/useLanguage.js";
 import Flag from "./components/flag.jsx";
 import AboutMe from "./components/aboutme.jsx";
 import Services from "./components/services.jsx";
+import Projects from "./components/projects.jsx";
+import Contact from "./components/contact.jsx";
 import Menu from "~icons/lucide/menu";
 import SIFacebook from "~icons/simple-icons/facebook";
 import SIX from "~icons/simple-icons/x";
@@ -98,17 +100,20 @@ function App() {
       <main className="flex-grow h-full">
         {/* Introduction Section */}
         <header className="bg-moccaBlack text-moccaWhite text-center py-4 curved-header">
-          <h1 className="text-moccaWhite text-2xl font-montserrat">
-            {texts.hi}
-          </h1>
-          <h1 className="text-moccaWhite text-6xl font-bold sifonn-font">
-            Moccad3v
-          </h1>
-          <h1 className="text-moccaWhite mt-3 text-lg font-montserrat md: px-2">
-            {texts.headline}
-          </h1>
+          <div className="space-y-1">
+            <h1 className="text-moccaWhite text-2xl font-montserrat">
+              {texts.hi}
+            </h1>
+            <h1 className="text-moccaWhite text-6xl sifonn-font font-bold">
+              Moccad3v
+            </h1>
+            <h1 className="text-moccaWhite text-lg font-montserrat px-4">
+              {texts.headline}
+            </h1>
+          </div>
+
           {/* My photo */}
-          <div className="flex justify-center mt-6">
+          <div className="flex justify-center">
             <img
               src={profileImage}
               alt="Profile"
@@ -120,8 +125,12 @@ function App() {
 
         {/* About me Section */}
         <AboutMe texts={texts} />
-        {/* About me Section */}
+        {/* Services Section */}
         <Services clicks={clicks} setClicks={setClicks} texts={texts} />
+        {/* Projects Section */}
+        <Projects clicks={clicks} setClicks={setClicks} texts={texts} />
+        {/* Contact Section */}
+        <Contact clicks={clicks} setClicks={setClicks} texts={texts} />
       </main>
 
       {/* Footer Section */}

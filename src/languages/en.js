@@ -28,6 +28,18 @@ const en = {
       p1: "",
     },
   },
+  projectsSec: {
+    title: "Projects",
+    description: {
+      p1: "",
+    },
+  },
+  contactSec: {
+    title: "Contact",
+    description: {
+      p1: "",
+    },
+  },
 };
 
 export default en;
