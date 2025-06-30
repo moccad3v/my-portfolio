@@ -1,6 +1,11 @@
 import React from "react";
 
-const aboutme = ({ texts }) => {
+const AboutMe = ({ texts, language }) => {
+  const cvFile =
+    language === "es"
+      ? "/cv/Ingeniero_de_Sistemas_(Desarrollador Full-stack)(ES).pdf"
+      : "/cv/Systems_Engineer_(Full-stack developer)(EN).pdf";
+
   return (
     <section
       id="aboutMe"
@@ -18,11 +23,15 @@ const aboutme = ({ texts }) => {
         {texts.aboutMeSec.description.p3}
       </p>
 
-      <button className="font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105">
+      <a
+        href={cvFile}
+        download
+        className="font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
+      >
         {texts.aboutMeSec.downloadCV}
-      </button>
+      </a>
     </section>
   );
 };
 
-export default aboutme;
+export default AboutMe;

@@ -124,7 +124,7 @@ function App() {
         </header>
 
         {/* About me Section */}
-        <AboutMe texts={texts} />
+        <AboutMe texts={texts} language={language} />
         {/* Services Section */}
         <Services clicks={clicks} setClicks={setClicks} texts={texts} />
         {/* Projects Section */}
