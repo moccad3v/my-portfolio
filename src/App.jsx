@@ -126,9 +126,9 @@ function App() {
         {/* About me Section */}
         <AboutMe texts={texts} language={language} />
         {/* Services Section */}
-        <Services clicks={clicks} setClicks={setClicks} texts={texts} />
+        <Services texts={texts} />
         {/* Projects Section */}
-        <Projects clicks={clicks} setClicks={setClicks} texts={texts} />
+        <Projects texts={texts} />
         {/* Contact Section */}
         <Contact clicks={clicks} setClicks={setClicks} texts={texts} />
       </main>
