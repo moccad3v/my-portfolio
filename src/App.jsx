@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "./hooks/useLanguage.js";
 import Flag from "./components/flag.jsx";
+import ScrollToTop from "./components/scrolltotop.jsx";
 import AboutMe from "./components/aboutme.jsx";
 import Services from "./components/services.jsx";
 import Projects from "./components/projects.jsx";
@@ -131,10 +132,12 @@ function App() {
         <Projects texts={texts} />
         {/* Contact Section */}
         <Contact clicks={clicks} setClicks={setClicks} texts={texts} />
+        {/* Botón flotante para subir */}
+        <ScrollToTop />
       </main>
 
       {/* Footer Section */}
-      <footer className="bottom-0 left-0 w-full bg-moccaBlack text-moccaWhite mt-4 py-4 px-8 md:px-18 font-montserrat">
+      <footer className="bottom-0 left-0 w-full bg-moccaBlack text-moccaWhite mt-4 py-4 px-8 font-montserrat">
         <div className="mx-auto flex flex-col md:grid md:grid-cols-3 items-center text-center md:text-left">
           <p className="text-sm md:justify-self-start">{texts.proud}</p>
           <p className="text-sm md:text-center md:justify-self-center mt-2 md:mt-0">
