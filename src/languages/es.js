@@ -9,7 +9,12 @@ const es = {
   headline: "Ingeniero de Sistemas | Desarrollador WEB Full-stack | QA Tester",
   clickHere: "¡Haz clic aquí para comenzar!",
   clicksMessage: (clicks) => `Has hecho clic ${clicks} veces. 🎉`,
-  proud: "Orgullosamente elaborada por Moccad3v",
+  footer: {
+    description: {
+      p1: "Orgullosamente elaborada por ",
+      hl1: "Moccad3v",
+    },
+  },
   copyright: "Todos los derechos reservados",
   aboutMeSec: {
     title: "Sobre mi",

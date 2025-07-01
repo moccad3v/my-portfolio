@@ -9,7 +9,12 @@ const en = {
   headline: "Systems Engineer | Full-stack WEB Developer | QA Tester",
   clickHere: "Click here to start!",
   clicksMessage: (clicks) => `You have clicked ${clicks} times. 🎉`,
-  proud: "Proudly made by Moccad3v",
+  footer: {
+    description: {
+      p1: "Proudly made by ",
+      hl1: "Moccad3v",
+    },
+  },
   copyright: "All rights reserved",
   aboutMeSec: {
     title: "About me",

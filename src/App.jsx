@@ -139,7 +139,17 @@ function App() {
       {/* Footer Section */}
       <footer className="bottom-0 left-0 w-full bg-moccaBlack text-moccaWhite mt-4 py-4 px-8 font-montserrat">
         <div className="mx-auto flex flex-col md:grid md:grid-cols-3 items-center text-center md:text-left">
-          <p className="text-sm md:justify-self-start">{texts.proud}</p>
+          <p className="text-sm md:justify-self-start">
+            {texts.footer.description.p1}
+            <a
+              href="https://www.linkedin.com/in/moccad3v/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold underline"
+            >
+              {texts.footer.description.hl1}
+            </a>
+          </p>
           <p className="text-sm md:text-center md:justify-self-center mt-2 md:mt-0">
             &copy; {new Date().getFullYear()} {texts.copyright}
           </p>
