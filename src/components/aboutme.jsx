@@ -17,7 +17,15 @@ const AboutMe = ({ texts, language }) => {
 
       <p className="mb-6 whitespace-pre-line text-lg max-w-4xl text-moccaBlack font-montserrat">
         {texts.aboutMeSec.description.p1}
-        <span className="font-bold">{texts.aboutMeSec.description.hl1}</span>
+        <a
+          href="https://www.linkedin.com/in/moccad3v"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold underline"
+        >
+          {texts.aboutMeSec.description.hl1}
+        </a>
+
         {texts.aboutMeSec.description.p2}
         <span className="font-bold">{texts.aboutMeSec.description.hl2}</span>
         {texts.aboutMeSec.description.p3}
@@ -26,7 +34,7 @@ const AboutMe = ({ texts, language }) => {
       <a
         href={cvFile}
         download
-        className="font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
+        className="w-60 font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
       >
         {texts.aboutMeSec.downloadCV}
       </a>

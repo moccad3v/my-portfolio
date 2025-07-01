@@ -16,7 +16,7 @@ const contact = ({ clicks, setClicks, texts }) => {
 
       <button
         onClick={() => setClicks(clicks + 1)}
-        className="font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
+        className="w-60 font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
       >
         {clicks === 0 ? texts.clickHere : texts.clicksMessage(clicks)}
       </button>
