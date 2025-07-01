@@ -10,7 +10,7 @@ const projects = ({ texts }) => {
         {texts.projectsSec.title}
       </h2>
 
-      <p className="mb-6 whitespace-pre-line text-lg max-w-4xl text-moccaBlack font-montserrat">
+      <p className="mb-6 whitespace-pre-line text-lg max-w-6xl text-moccaBlack font-montserrat">
         {texts.construction}
       </p>
     </section>
