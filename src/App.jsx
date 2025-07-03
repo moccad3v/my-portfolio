@@ -7,6 +7,7 @@ import Services from "./components/services.jsx";
 import Projects from "./components/projects.jsx";
 import Contact from "./components/contact.jsx";
 import Menu from "~icons/lucide/menu";
+import SILinkedIn from "~icons/simple-icons/linkedin";
 import SIFacebook from "~icons/simple-icons/facebook";
 import SIX from "~icons/simple-icons/x";
 import SIInstagram from "~icons/simple-icons/instagram";
@@ -145,7 +146,7 @@ function App() {
               href="https://www.linkedin.com/in/moccad3v/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold underline"
+              className="font-semibold underline hover:text-moccaBlue"
             >
               {texts.footer.description.hl1}
             </a>
@@ -155,25 +156,32 @@ function App() {
           </p>
           <div className="flex justify-center md:justify-end gap-4 mt-2 md:mt-0">
             <a
+              href="https://www.linkedin.com/moccad3v"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SILinkedIn className="w-5 h-5 hover:text-moccaBlue transition" />
+            </a>
+            <a
               href="https://www.facebook.com/moccad3v"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SIFacebook className="w-6 h-6 hover:text-moccaBlue transition" />
+              <SIFacebook className="w-5 h-5 hover:text-moccaBlue transition" />
             </a>
             <a
               href="https://www.x.com/moccad3v"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SIX className="w-6 h-6  hover:text-moccaBlue transition" />
+              <SIX className="w-5 h-5  hover:text-moccaBlue transition" />
             </a>
             <a
               href="https://www.instagram.com/moccad3v"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SIInstagram className="w-6 h-6 hover:text-moccaBlue transition" />
+              <SIInstagram className="w-5 h-5 hover:text-moccaBlue transition" />
             </a>
           </div>
         </div>
