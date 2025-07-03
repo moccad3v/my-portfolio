@@ -27,7 +27,7 @@ const en = {
       hl3: "Web development ",
       p4: "the ideal way to combine logic and design.",
       p5: "\nOver the years, I've shaped myself as a ",
-      hl4: "Full-stack developer, ",
+      hl4: "Full-stack Developer, ",
       p6: "while nurturing a strong passion for ",
       p7: "\nartificial intelligence, storytelling, and graphic design",
       p8: ".\nOutside of code, I turn the everyday into ",
