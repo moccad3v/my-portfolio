@@ -156,7 +156,7 @@ function App() {
           </p>
           <div className="flex justify-center md:justify-end gap-4 mt-2 md:mt-0">
             <a
-              href="https://www.linkedin.com/moccad3v"
+              href="https://www.linkedin.com/in/moccad3v"
               target="_blank"
               rel="noopener noreferrer"
             >
