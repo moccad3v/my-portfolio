@@ -47,11 +47,11 @@ function App() {
               setMenuOpen(!menuOpen);
             }}
           >
-            <Menu className="w-8 h-8 text-moccaWhite" />
+            <Menu className="w-8 h-8 text-moccaWhite " />
           </button>
 
           {/* Links de navegación (versión escritorio) */}
-          <div className="font-montserrat hidden md:flex gap-6 text-sm uppercase">
+          <div className="font-montserrat hidden md:flex gap-4 text-sm uppercase font-bold">
             {["aboutMe", "services", "projects", "contact"].map((item) => (
               <a key={item} href={`#${item}`} className="hover:text-moccaBlue">
                 {texts[item]}
@@ -84,12 +84,12 @@ function App() {
 
       {/* Menú desplegable en móviles */}
       {menuOpen && (
-        <div className="z-50 font-montserrat mobile-menu md:hidden absolute top-16 left-3 right-3 bg-moccaGrayT text-moccaWhite flex flex-col items-center gap-2 py-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out">
+        <div className="z-50 font-montserrat mobile-menu md:hidden absolute top-16 left-2 right-2 bg-moccaGrayT text-moccaWhite flex flex-col items-center gap-4 py-4 rounded-lg shadow-lg transition-all duration-300 ease-linear">
           {["aboutMe", "services", "projects", "contact"].map((item) => (
             <a
               key={item}
               href={`#${item}`}
-              className="hover:text-moccaBlue"
+              className="hover:text-moccaBlue font-bold"
               onClick={() => setMenuOpen(false)}
             >
               {texts[item]}
@@ -106,10 +106,10 @@ function App() {
             <h1 className="text-moccaWhite text-2xl font-montserrat">
               {texts.hi}
             </h1>
-            <h1 className="text-moccaWhite text-6xl sifonn-font font-bold">
+            <h1 className="text-moccaWhite text-6xl md:text-8xl sifonn-font">
               Moccad3v
             </h1>
-            <h1 className="text-moccaWhite text-lg font-montserrat px-4">
+            <h1 className="text-moccaWhite text-2xl font-montserrat px-4">
               {texts.headline}
             </h1>
           </div>
