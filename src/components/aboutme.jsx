@@ -1,11 +1,6 @@
 import React from "react";
 
-const AboutMe = ({ texts, language }) => {
-  const cvFile =
-    language === "es"
-      ? "/cv/Ingeniero_de_Sistemas_(Desarrollador Full-stack)(ES).pdf"
-      : "/cv/Systems_Engineer_(Full-stack developer)(EN).pdf";
-
+const AboutMe = ({ texts }) => {
   return (
     <section
       id="aboutMe"
@@ -45,27 +40,6 @@ const AboutMe = ({ texts, language }) => {
         </a>
         {texts.aboutMeSec.description.p9}
       </p>
-      <span className="mb-6 font-bold text-3xl text-moccaBlack ">
-        {texts.aboutMeSec.description.p10}
-      </span>
-
-      <div className="flex gap-4 flex-col md:grid md:grid-cols-2 justify-center">
-        <a
-          href="https://www.linkedin.com/in/moccad3v"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-60 font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
-        >
-          {texts.aboutMeSec.contact}
-        </a>
-        <a
-          href={cvFile}
-          download
-          className="w-60 font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
-        >
-          {texts.aboutMeSec.downloadCV}
-        </a>
-      </div>
     </section>
   );
 };

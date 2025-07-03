@@ -126,13 +126,18 @@ function App() {
         </header>
 
         {/* About me Section */}
-        <AboutMe texts={texts} language={language} />
+        <AboutMe texts={texts} />
         {/* Services Section */}
         <Services texts={texts} />
         {/* Projects Section */}
         <Projects texts={texts} />
         {/* Contact Section */}
-        <Contact clicks={clicks} setClicks={setClicks} texts={texts} />
+        <Contact
+          clicks={clicks}
+          setClicks={setClicks}
+          texts={texts}
+          language={language}
+        />
         {/* Botón flotante para subir */}
         <ScrollToTop />
       </main>

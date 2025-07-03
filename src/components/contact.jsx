@@ -1,6 +1,11 @@
 import React from "react";
 
-const contact = ({ clicks, setClicks, texts }) => {
+const contact = ({ texts, language }) => {
+  const cvFile =
+    language === "es"
+      ? "/cv/Ingeniero_de_Sistemas_(Desarrollador Full-stack)(ES).pdf"
+      : "/cv/Systems_Engineer_(Full-stack developer)(EN).pdf";
+
   return (
     <section
       id="contact"
@@ -9,17 +14,34 @@ const contact = ({ clicks, setClicks, texts }) => {
       <h2 className="text-4xl font-bold mb-6 text-moccaBlack sifonn-font">
         {texts.contactSec.title}
       </h2>
-
-      <p className="mb-6 whitespace-pre-line text-lg max-w-6xl text-moccaBlack font-montserrat">
-        {texts.construction}
+      <p className="mb-6 font-bold text-3xl text-moccaBlack ">
+        {texts.aboutMeSec.description.p10}
       </p>
 
-      <button
+      <div className="flex gap-4 flex-col md:grid md:grid-cols-2 justify-center">
+        <a
+          href="https://www.linkedin.com/in/moccad3v"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-60 font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
+        >
+          {texts.aboutMeSec.contact}
+        </a>
+        <a
+          href={cvFile}
+          download
+          className="w-60 font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
+        >
+          {texts.aboutMeSec.downloadCV}
+        </a>
+      </div>
+
+      {/* <button
         onClick={() => setClicks(clicks + 1)}
-        className="w-60 font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
+        className="w-60 mt-4 font-montserrat px-6 py-3 bg-gradient-to-r from-moccaBlue to-[#053a80] text-moccaWhite font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
       >
         {clicks === 0 ? texts.clickHere : texts.clicksMessage(clicks)}
-      </button>
+      </button> */}
     </section>
   );
 };
