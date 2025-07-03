@@ -19,7 +19,7 @@ const en = {
   aboutMeSec: {
     title: "About me",
     description: {
-      p1: "My name is Juan Pascuas, but in the digital world I go by ",
+      p1: "My name is Juan Pascuas, but in the digital world I'm known as ",
       hl1: "Moccad3v",
       p2: ".\nI'm a ",
       hl2: "Systems Engineer ",
